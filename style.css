@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+.top-bar, .main-menu {
+    background-color: #fff;
+    padding: 10px 20px;
+}
+.logo img {
+    height: 40px;
+    vertical-align: middle;
+}
+.main-menu ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+.main-menu a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+}
+.image-section, .poem {
+    padding: 20px;
+    background: white;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.demo-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.two-columns {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  margin: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.left-block img {
+  width: 100%;
+  max-width: 550px;
+  border-radius: 10px;
+}
+
+.right-block {
+  max-width: 300px;
+  text-align: center;
+}
+
+.right-block h3 {
+  margin-top: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.right-block img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.section-title {
+  cursor: pointer;
+  background-color: #f0f0f0;
+  padding: 12px;
+  margin: 20px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 10px 20px;
+}
+
+.image-gallery img {
+  width: calc(33.333% - 10px);
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.hidden {
+  display: none;
+}
