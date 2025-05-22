@@ -1,3 +1,10 @@
+Đúng rồi! Mình sẽ **thêm trực tiếp vào file HTML bạn đã gửi ở trên**. Dưới đây là **toàn bộ mã HTML đã được chỉnh sửa**, trong đó phần menu (`<nav>`) đã được căn **theo chiều ngang từ trái sang phải**, hiển thị đẹp mắt:
+
+---
+
+### ✅ File HTML sau khi đã chỉnh sửa:
+
+```html
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -25,20 +32,34 @@
       margin: 0;
       text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
     }
-    nav {
+    nav.main-menu {
       background: #343a40;
-      padding: 10px;
-      text-align: center;
+      padding: 10px 0;
     }
-    nav a {
+    nav.main-menu ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav.main-menu ul li {
+      margin: 0 15px;
+    }
+    nav.main-menu ul li a {
       color: white;
       text-decoration: none;
-      margin: 0 10px;
       font-weight: bold;
       font-size: 16px;
+      padding: 8px 12px;
+      display: inline-block;
+      transition: background 0.3s ease;
     }
-    nav a:hover {
-      text-decoration: underline;
+    nav.main-menu ul li a:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 5px;
+      text-decoration: none;
     }
     .datetime {
       text-align: center;
@@ -86,19 +107,18 @@
     <h1>Hành Trình Trong Mơ – Góc Nhỏ Của Tôi</h1>
   </header>
 
- </div>
-        <nav class="main-menu">
-            <ul>
-                <li><a href="index.html">🏠</a></li>
-                <li><a href="trang-tho.html">Trang Thơ</a></li>
-                 <li><a href="Luu-niem.html">Lưu Niệm</a></li>
-                <li><a href="#">Khoa học</a></li>
-                <li><a href="#">Video</a></li>
-                <li><a href="#">Góc nhìn</a></li>
-                <li><a href="#">Giải trí</a></li>
-                <li><a href="#">Thư giãn</a></li>
-            </ul>
-        </nav>
+  <nav class="main-menu">
+    <ul>
+      <li><a href="index.html">🏠</a></li>
+      <li><a href="trang-tho.html">Trang Thơ</a></li>
+      <li><a href="Luu-niem.html">Lưu Niệm</a></li>
+      <li><a href="#">Khoa học</a></li>
+      <li><a href="#">Video</a></li>
+      <li><a href="#">Góc nhìn</a></li>
+      <li><a href="#">Giải trí</a></li>
+      <li><a href="#">Thư giãn</a></li>
+    </ul>
+  </nav>
 
   <div class="datetime">
     <span id="datetime"></span>
@@ -139,3 +159,10 @@
   </script>
 </body>
 </html>
+```
+
+---
+
+Nếu bạn muốn, mình có thể tạo sẵn **file `.html`**, bạn chỉ cần **tải về** và thay thế file cũ trên GitHub.
+
+👉 Bạn có muốn mình tạo và gửi file đó không?
