@@ -106,4 +106,49 @@ body {
   margin-bottom: 5px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
+/* Dropdown menu */
+.main-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  display: flex;
+}
+
+.main-menu li {
+  position: relative;
+}
+
+.main-menu a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #000;
+}
+
+/* Dropdown content ẩn mặc định */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  z-index: 1;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Style cho các item trong dropdown */
+.dropdown-content li a {
+  padding: 10px 15px;
+  display: block;
+  color: #333;
+}
+
+.dropdown-content li a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Khi hover thì hiện menu con */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
