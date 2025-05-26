@@ -1,42 +1,114 @@
-
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Thơ</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang Thơ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      background-color: #fdfdfd;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #5a4fcf;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    header .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    header img {
+      height: 50px;
+    }
+    nav {
+      background-color: #4139b1;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main.content {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    section.poem {
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    section.poem h2 {
+      font-family: 'Playfair Display', serif;
+      color: #5a4fcf;
+    }
+    section.poem a {
+      color: #1a73e8;
+      font-weight: bold;
+    }
+    .video iframe {
+      width: 100%;
+      max-width: 560px;
+      height: 315px;
+      border: none;
+      margin-top: 10px;
+    }
+    section.comments {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+    section.comments h3 {
+      color: #5a4fcf;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="top-bar">
-            <div class="logo">
-                <img src="Minhhoa.png" alt="Logo" />
-                <span>Trang Thơ - Nơi cảm xúc thăng hoa</span>
-            </div>
-        </div>
-        <nav class="main-menu">
-            <ul>
-                <li><a href="index.html">🏠</a></li>
-                <li><a href="trang-tho.html">Trang Thơ</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <div class="logo">
+      <img src="Minhhoa.png" alt="Logo">
+      <span>Trang Thơ - Nơi cảm xúc thăng hoa</span>
+    </div>
+  </header>
 
-        <main class="content">
-       <section class="poem">
-    <h2><strong>Bài thơ: Khóc Mẹ, Tiễn Bà</strong></h2>
-              <a href="Khóc Mẹ -Tiễn Bà.pdf" target="_blank">📄 Xem bài thơ "Khóc mẹ, Tiễn bà" dạng PDF</a><br><br>
-    <p><em>Tác giả: Dương Thúc Tuy <br><br>
-    Bài thơ “Khóc Mẹ, Tiễn Bà” của tác giả Dương Thúc Tuy, viết tại Đức Thọ năm 1982, là một tác phẩm chan chứa cảm xúc, đậm chất nhân văn và thấm đẫm tình mẫu tử thiêng liêng.<br><br>
+  <nav>
+    <a href="index.html">🏠 Trang chủ</a>
+    <a href="trang-tho.html">📖 Trang Thơ</a>
+  </nav>
 
- 
-</section>
+  <main class="content">
+    <!-- Mỗi bài thơ -->
+    <section class="poem">
+      <h2>Bài thơ: Khóc Mẹ, Tiễn Bà</h2>
+      <a href="Khóc Mẹ -Tiễn Bà.pdf" target="_blank">📄 Xem dưới dạng PDF</a>
+      <p><em>Tác giả: Dương Thúc Tuy</em></p>
+      <p>Bài thơ “Khóc Mẹ, Tiễn Bà” viết tại Đức Thọ năm 1982, chan chứa cảm xúc, đậm chất nhân văn và thấm đ\u1ebm tình mẫu tử thiêng liêng.</p>
+    </section>
 
-<section class="poem">
+    <section class="poem">
     <h2>Bài thơ: Chuyện bà đau mắt</h2>
         <p><em>Tác giả: Dương Thúc Tuy<br><br>
-         <a href="Chuyện bà đau mắt.pdf" target="_blank">📄 Xem bài thơ"Chuyện bà đau mắt" dưới dạng PDF</a>
+         <a href="Chuyện bà đau mắt.pdf" target="_blank">📄 Xem bài thơ"Chuyện bà đau mắt" dưới dạng PDF</a><br> <br> 
             "Chuyện bà đau mắt" là một bài thơ hài hước nhưng không nhảm, trào lộng nhưng đầy nhân sinh,<br>
             mang chất truyện cười dân gian hiện đại, nhưng cũng chứa đựng lời cảnh tỉnh sâu sắc về thói sính bằng cấp, sính hình thức trong xã hội.<br><br>
 
@@ -54,7 +126,7 @@ Hài hước kết hợp với triết lý sâu sắc<br><br>
 
 <section class="poem">
     <h2>Bài thơ: Lời của con chó tôi nuôi</h2>
-      <a href="Lời của con chó tôi nuôi.pdf" target="_blank">📄 Xem bài thơ dạng "Lời của con chó tôi nuôi" dưới dạng PDF</a>
+      <a href="Lời của con chó tôi nuôi.pdf" target="_blank">📄 Xem bài thơ dạng "Lời của con chó tôi nuôi" dưới dạng PDF</a><br> 
     <p><em>Tác giả: Dương Thúc Tuy <br><br> 
   "Lời của con chó tôi nuôi" không chỉ là một bài thơ vui – mà là một tấm gương hiện thực,<br> 
 soi chiếu những nghịch lý của đời sống. Tác giả Dương Thúc Tuy, với bút lực châm biếm sâu sắc nhưng nhân hậu, đã để lại một thông điệp đắt giá:<br> 
@@ -69,18 +141,32 @@ khôn ngoan để không bị bỏ lại phía sau.Nhưng cho dù thế nào, c�
     <h2>Bài thơ: Con Cói Biển </h2>
       <a href="Con Cói Biển.pdf" target="_blank">📄 Xem bài thơ dạng "Con Cói Biển" dưới dạng PDF</a>
     <p><em>Dịch giả: Dương Thúc Tuy <br><br> 
+        Bài thơ đặt ra một câu hỏi lớn về tình yêu thương, sự hy sinh và đạo làm cha mẹ.<br> 
+        Không ồn ào, không kêu gào, sự hy sinh của con cói được thể hiện bằng ngôn ngữ giản dị nhưng giàu sức gợi, khiến người đọc xúc động lặng người<br> <br> 
   
 
 </em></p>
 
     <section class="poem">
     <h2>Bài thơ: Những Phút Xao Lòng </h2>
-      <a href="Những Phút Xao Lòng.pdf" target="_blank">📄 Xem bài thơ dạng "Những Phút Xao Lòng" dưới dạng PDF</a>
+      <a href="Những Phút Xao Lòng.pdf" target="_blank">📄 Xem bài thơ dạng "Những Phút Xao Lòng" dưới dạng PDF</a><br> 
     <p><em>Tác giả: Thuận Hữu <br><br> 
         Bài thơ đề cập đến những rung động kín đáo, mơ hồ nhưng rất thật trong đời sống hôn nhân – những “phút xao lòng” <br>
         mà ai cũng có thể từng trải qua. Đó là khi quá khứ và hiện tại va chạm nhẹ vào nhau, tạo nên một thoáng suy tư,<br>
         một khoảnh khắc hồi tưởng, một chút bâng khuâng… nhưng rồi lại trở về với thực tại đầy yêu thương và trách nhiệm.<br><br>
   
+
+</em></p>
+         <section class="poem">
+    <h2>Bài thơ: Chờ Không Hẹn </h2>
+      <a href="Chờ Không Hẹn.pdf" target="_blank">📄 Xem bài thơ dạng "Chờ Không Hẹn" dưới dạng PDF</a>
+    <p><em>Tác giả: Thuận Hữu <br><br> 
+       Bài thơ không có cao trào kịch tính. Nó không nói đến những cái ôm,<br> 
+        nụ hôn hay lời tỏ tình, mà chỉ là những nhịp thở, ánh mắt nhìn ra xa, tiếng gọi khẽ…<br> 
+        Nhưng chính sự thầm lặng và bền bỉ ấy lại tạo nên sức cảm sâu sắc.<br> 
+
+“Không hẹn gì đâu mà ta vẫn cứ chờ” – là lời kết đầy day dứt, vừa là sự tự thú,<br> 
+        vừa như một bản nhạc khẽ khàng khép lại bản tình ca chưa kịp bắt đầu.<br> <br> 
 
 </em></p>
   
@@ -108,27 +194,20 @@ khôn ngoan để không bị bỏ lại phía sau.Nhưng cho dù thế nào, c�
         Bài thơ này xứng đáng được giới thiệu trong các bài học đạo đức, trong sách giáo khoa,<br>
         hay trong những buổi đọc thơ gia đình – để mỗi người con đều hiểu, lớn lên trong tình yêu, là lớn lên bằng nhân cách.<br><br>
 
-
-
-
 </em></p>
-    </section>
-            </p>
-        </section>
-    </main>
 
+  </main>
 
-    <!-- Nhúng Utterances để tạo tính năng bình luận -->
-    <section class="comments">
-        <h3>Bình luận</h3>
-        <script src="https://utteranc.es/client.js"
+  <section class="comments">
+    <h3>Bình luận</h3>
+    <script src="https://utteranc.es/client.js"
             repo="Sonho1974/Home-page"
             issue-term="pathname"
             label="comment"
             theme="github-light"
             crossorigin="anonymous"
             async>
-        </script>
-    </section>
+    </script>
+  </section>
 </body>
 </html>
