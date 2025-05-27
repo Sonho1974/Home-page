@@ -8,830 +8,120 @@
   <style>
     body {
       font-family: 'Roboto', sans-serif;
-      background: #fffbe6;
       margin: 0;
+      background: #fffaf0;
       color: #333;
     }
     header {
-      background: url('Minhhoa2.gif') no-repeat center center/cover;
-      padding: 30px;
-      text-align: center;
+      background: linear-gradient(to right, #ff9966, #ff5e62);
       color: white;
+      padding: 40px 20px;
+      text-align: center;
     }
     header h1 {
+      margin: 0;
       font-family: 'Playfair Display', serif;
       font-size: 36px;
-      margin: 0;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
     }
     nav {
-      background: #ffcc70;
+      background: #ffd699;
       text-align: center;
-      padding: 10px 0;
+      padding: 10px;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
     nav a {
+      color: #5c4033;
       text-decoration: none;
-      color: #6b4f27;
       margin: 0 15px;
       font-weight: bold;
-      font-size: 18px;
     }
-    nav a:hover {
-      text-decoration: underline;
+    .gallery-section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 30px 20px;
     }
-    .section-title {
-      background-color: #fff4d6;
-      padding: 15px 20px;
-      margin: 30px 20px 10px;
-      border-radius: 10px;
-      font-size: 22px;
-      font-weight: bold;
-      color: #d2691e;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-      cursor: pointer;
-      transition: background 0.3s;
+    h2.section-title {
+      font-size: 24px;
+      margin-top: 40px;
+      text-align: center;
+      color: #c1440e;
     }
-    .section-title:hover {
-      background-color: #ffe6aa;
-    }
-    .description {
-      margin-left: 20px;
-      font-size: 16px;
-      color: #444;
-    }
-    .image-gallery {
+    .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
       gap: 15px;
-      padding: 20px;
+      margin-top: 20px;
     }
-    .image-gallery img {
+    .gallery img {
       width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease-in-out;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease;
     }
-    .image-gallery img:hover {
+    .gallery img:hover {
       transform: scale(1.05);
     }
-    .hidden {
-      display: none;
+    .video-container {
+      text-align: center;
+      margin: 40px 0;
     }
     iframe {
-      display: block;
-      margin: 30px auto;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      max-width: 90%;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    .back-home {
+      text-align: center;
+      margin: 40px;
+    }
+    .back-home a {
+      font-size: 16px;
+      text-decoration: none;
+      color: #ff5e62;
+      font-weight: bold;
     }
   </style>
-  <script>
-    function toggleGallery(id) {
-      const gallery = document.getElementById(id);
-      gallery.classList.toggle('hidden');
-    }
-  </script>
 </head>
 <body>
   <header>
     <h1>Lưu Niệm Ngày Hội Khóa</h1>
   </header>
   <nav>
-    <a href="index.html">🏠 Trang chủ</a>
-    <a href="#gallery-truong">Trường xưa</a>
-    <a href="#gallery-resort">Resort Xuân Thành</a>
+    <a href="index.html">🏠 Trang Chủ</a>
+    <a href="#truong">Trường xưa</a>
+    <a href="#resort">Resort Xuân Thành</a>
   </nav>
 
-  <iframe width="700" height="400" src="https://www.youtube.com/embed/gUGvbqP0Zgk" title="Video Ngày Hội Ngộ" allowfullscreen></iframe>
-
-  <h2 class="section-title" onclick="toggleGallery('gallery-truong')">📸 Ảnh chụp tại trường</h2>
-  <p class="description">
-    Những bức ảnh gợi nhớ tuổi học trò dưới mái trường Quang Trung A.
-  </p>
-  <div id="gallery-truong" class="image-gallery hidden">
-    <img src="QTA001 (1).jpg" alt="">
-    <img src="QTA001 (2).jpg" alt="">
-<img src="QTA001 (3).jpg" alt="">
-<img src="QTA001 (4).jpg" alt="">
-<img src="QTA001 (5).jpg" alt="">
-<img src="QTA001 (6).jpg" alt="">
-<img src="QTA001 (7).jpg" alt="">
-<img src="QTA001 (8).jpg" alt="">
-<img src="QTA001 (9).jpg" alt="">
-<img src="QTA001 (10).jpg" alt="">
-<img src="QTA001 (11).jpg" alt="">
-<img src="QTA001 (12).jpg" alt="">
-<img src="QTA001 (13).jpg" alt="">
-<img src="QTA001 (14).jpg" alt="">
-<img src="QTA001 (15).jpg" alt="">
-<img src="QTA001 (16).jpg" alt="">
-<img src="QTA001 (17).jpg" alt="">
-<img src="QTA001 (18).jpg" alt="">
-<img src="QTA001 (19).jpg" alt="">
-<img src="QTA001 (20).jpg" alt="">
-<img src="QTA001 (21).jpg" alt="">
-<img src="QTA001 (22).jpg" alt="">
-<img src="QTA001 (23).jpg" alt="">
-<img src="QTA001 (24).jpg" alt="">
-<img src="QTA001 (25).jpg" alt="">
-<img src="QTA001 (26).jpg" alt="">
-<img src="QTA001 (27).jpg" alt="">
-<img src="QTA001 (28).jpg" alt="">
-<img src="QTA001 (29).jpg" alt="">
-<img src="QTA001 (30).jpg" alt="">
-<img src="QTA001 (31).jpg" alt="">
-<img src="QTA001 (32).jpg" alt="">
-<img src="QTA001 (33).jpg" alt="">
-<img src="QTA001 (34).jpg" alt="">
-<img src="QTA001 (35).jpg" alt="">
-<img src="QTA001 (36).jpg" alt="">
-<img src="QTA001 (37).jpg" alt="">
-<img src="QTA001 (38).jpg" alt="">
-<img src="QTA001 (39).jpg" alt="">
-<img src="QTA001 (40).jpg" alt="">
-<img src="QTA001 (41).jpg" alt="">
-<img src="QTA001 (42).jpg" alt="">
-<img src="QTA001 (43).jpg" alt="">
-<img src="QTA001 (44).jpg" alt="">
-<img src="QTA001 (45).jpg" alt="">
-<img src="QTA001 (46).jpg" alt="">
-<img src="QTA001 (47).jpg" alt="">
-<img src="QTA001 (48).jpg" alt="">
-<img src="QTA001 (49).jpg" alt="">
-<img src="QTA001 (50).jpg" alt="">
-<img src="QTA001 (51).jpg" alt="">
-<img src="QTA001 (52).jpg" alt="">
-<img src="QTA001 (53).jpg" alt="">
-<img src="QTA001 (54).jpg" alt="">
-<img src="QTA001 (55).jpg" alt="">
-<img src="QTA001 (56).jpg" alt="">
-<img src="QTA001 (57).jpg" alt="">
-<img src="QTA001 (58).jpg" alt="">
-<img src="QTA001 (59).jpg" alt="">
-<img src="QTA001 (60).jpg" alt="">
-<img src="QTA001 (61).jpg" alt="">
-<img src="QTA001 (62).jpg" alt="">
-<img src="QTA001 (63).jpg" alt="">
-<img src="QTA001 (64).jpg" alt="">
-<img src="QTA001 (65).jpg" alt="">
-<img src="QTA001 (66).jpg" alt="">
-<img src="QTA001 (67).jpg" alt="">
-<img src="QTA001 (68).jpg" alt="">
-<img src="QTA001 (69).jpg" alt="">
-<img src="QTA001 (70).jpg" alt="">
-<img src="QTA001 (71).jpg" alt="">
-<img src="QTA001 (72).jpg" alt="">
-<img src="QTA001 (73).jpg" alt="">
-<img src="QTA001 (74).jpg" alt="">
-<img src="QTA001 (75).jpg" alt="">
-<img src="QTA001 (76).jpg" alt="">
-<img src="QTA001 (77).jpg" alt="">
-<img src="QTA001 (78).jpg" alt="">
-<img src="QTA001 (79).jpg" alt="">
-<img src="QTA001 (80).jpg" alt="">
-<img src="QTA001 (81).jpg" alt="">
-<img src="QTA001 (82).jpg" alt="">
-<img src="QTA001 (83).jpg" alt="">
-<img src="QTA001 (84).jpg" alt="">
-<img src="QTA001 (85).jpg" alt="">
-<img src="QTA001 (86).jpg" alt="">
-<img src="QTA001 (87).jpg" alt="">
-<img src="QTA001 (88).jpg" alt="">
-<img src="QTA001 (89).jpg" alt="">
-<img src="QTA001 (90).jpg" alt="">
-<img src="QTA001 (91).jpg" alt="">
-<img src="QTA001 (92).jpg" alt="">
-<img src="QTA001 (93).jpg" alt="">
-<img src="QTA001 (94).jpg" alt="">
-<img src="QTA001 (95).jpg" alt="">
-<img src="QTA001 (96).jpg" alt="">
-<img src="QTA001 (97).jpg" alt="">
-<img src="QTA001 (98).jpg" alt="">
-<img src="QTA001 (99).jpg" alt="">
-<img src="QTA001 (100).jpg" alt="">
-<img src="QTA001 (101).jpg" alt="">
-<img src="QTA001 (102).jpg" alt="">
-<img src="QTA001 (103).jpg" alt="">
-<img src="QTA001 (104).jpg" alt="">
-<img src="QTA001 (105).jpg" alt="">
-<img src="QTA001 (106).jpg" alt="">
-<img src="QTA001 (107).jpg" alt="">
-<img src="QTA001 (108).jpg" alt="">
-<img src="QTA001 (109).jpg" alt="">
-<img src="QTA001 (110).jpg" alt="">
-<img src="QTA001 (111).jpg" alt="">
-<img src="QTA001 (112).jpg" alt="">
-<img src="QTA001 (113).jpg" alt="">
-<img src="QTA001 (114).jpg" alt="">
-<img src="QTA001 (115).jpg" alt="">
-<img src="QTA001 (116).jpg" alt="">
-<img src="QTA001 (117).jpg" alt="">
-<img src="QTA001 (118).jpg" alt="">
-<img src="QTA001 (119).jpg" alt="">
-<img src="QTA001 (120).jpg" alt="">
-<img src="QTA001 (121).jpg" alt="">
-<img src="QTA001 (122).jpg" alt="">
-<img src="QTA001 (123).jpg" alt="">
-<img src="QTA001 (124).jpg" alt="">
-<img src="QTA001 (125).jpg" alt="">
-<img src="QTA001 (126).jpg" alt="">
-<img src="QTA001 (127).jpg" alt="">
-<img src="QTA001 (128).jpg" alt="">
-<img src="QTA001 (129).jpg" alt="">
-<img src="QTA001 (130).jpg" alt="">
-<img src="QTA001 (131).jpg" alt="">
-<img src="QTA001 (132).jpg" alt="">
-<img src="QTA001 (133).jpg" alt="">
-<img src="QTA001 (134).jpg" alt="">
-<img src="QTA001 (135).jpg" alt="">
-<img src="QTA001 (136).jpg" alt="">
-<img src="QTA001 (137).jpg" alt="">
-<img src="QTA001 (138).jpg" alt="">
-<img src="QTA001 (139).jpg" alt="">
-<img src="QTA001 (140).jpg" alt="">
-<img src="QTA001 (141).jpg" alt="">
-<img src="QTA001 (142).jpg" alt="">
-<img src="QTA001 (143).jpg" alt="">
-<img src="QTA001 (144).jpg" alt="">
-<img src="QTA001 (145).jpg" alt="">
-<img src="QTA001 (146).jpg" alt="">
-<img src="QTA001 (147).jpg" alt="">
-<img src="QTA001 (148).jpg" alt="">
-<img src="QTA001 (149).jpg" alt="">
-<img src="QTA001 (150).jpg" alt="">
-<img src="QTA001 (151).jpg" alt="">
-<img src="QTA001 (152).jpg" alt="">
-<img src="QTA001 (153).jpg" alt="">
-<img src="QTA001 (154).jpg" alt="">
-<img src="QTA001 (155).jpg" alt="">
-<img src="QTA001 (156).jpg" alt="">
-<img src="QTA001 (157).jpg" alt="">
-<img src="QTA001 (158).jpg" alt="">
-<img src="QTA001 (159).jpg" alt="">
-<img src="QTA001 (160).jpg" alt="">
-<img src="QTA001 (161).jpg" alt="">
-<img src="QTA001 (162).jpg" alt="">
-<img src="QTA001 (163).jpg" alt="">
-<img src="QTA001 (164).jpg" alt="">
-<img src="QTA001 (165).jpg" alt="">
-<img src="QTA001 (166).jpg" alt="">
-<img src="QTA001 (167).jpg" alt="">
-<img src="QTA001 (168).jpg" alt="">
-<img src="QTA001 (169).jpg" alt="">
-<img src="QTA001 (170).jpg" alt="">
-<img src="QTA001 (171).jpg" alt="">
-<img src="QTA001 (172).jpg" alt="">
-<img src="QTA001 (173).jpg" alt="">
-<img src="QTA001 (174).jpg" alt="">
-<img src="QTA001 (175).jpg" alt="">
-<img src="QTA001 (176).jpg" alt="">
-<img src="QTA001 (177).jpg" alt="">
-<img src="QTA001 (178).jpg" alt="">
-<img src="QTA001 (179).jpg" alt="">
-<img src="QTA001 (180).jpg" alt="">
-<img src="QTA001 (181).jpg" alt="">
-<img src="QTA001 (182).jpg" alt="">
-<img src="QTA001 (183).jpg" alt="">
-<img src="QTA001 (184).jpg" alt="">
-<img src="QTA001 (185).jpg" alt="">
-<img src="QTA001 (186).jpg" alt="">
-<img src="QTA001 (187).jpg" alt="">
-<img src="QTA001 (188).jpg" alt="">
-<img src="QTA001 (189).jpg" alt="">
-<img src="QTA001 (190).jpg" alt="">
-<img src="QTA001 (191).jpg" alt="">
-<img src="QTA001 (192).jpg" alt="">
-<img src="QTA001 (193).jpg" alt="">
-<img src="QTA001 (194).jpg" alt="">
-<img src="QTA001 (195).jpg" alt="">
-<img src="QTA001 (196).jpg" alt="">
-<img src="QTA001 (197).jpg" alt="">
-<img src="QTA001 (198).jpg" alt="">
-<img src="QTA001 (199).jpg" alt="">
-<img src="QTA001 (200).jpg" alt="">
-<img src="QTA001 (201).jpg" alt="">
-<img src="QTA001 (202).jpg" alt="">
-<img src="QTA001 (203).jpg" alt="">
-<img src="QTA001 (204).jpg" alt="">
-<img src="QTA001 (205).jpg" alt="">
-<img src="QTA001 (206).jpg" alt="">
-<img src="QTA001 (207).jpg" alt="">
-<img src="QTA001 (208).jpg" alt="">
-<img src="QTA001 (209).jpg" alt="">
-<img src="QTA001 (210).jpg" alt="">
-<img src="QTA001 (211).jpg" alt="">
-<img src="QTA001 (212).jpg" alt="">
-<img src="QTA001 (213).jpg" alt="">
-<img src="QTA001 (214).jpg" alt="">
-<img src="QTA001 (215).jpg" alt="">
-<img src="QTA001 (216).jpg" alt="">
-<img src="QTA001 (217).jpg" alt="">
-<img src="QTA001 (218).jpg" alt="">
-<img src="QTA001 (219).jpg" alt="">
-<img src="QTA001 (220).jpg" alt="">
-<img src="QTA001 (221).jpg" alt="">
-<img src="QTA001 (222).jpg" alt="">
-<img src="QTA001 (223).jpg" alt="">
-<img src="QTA001 (224).jpg" alt="">
-<img src="QTA001 (225).jpg" alt="">
-<img src="QTA001 (226).jpg" alt="">
-<img src="QTA001 (227).jpg" alt="">
-<img src="QTA001 (228).jpg" alt="">
-<img src="QTA001 (229).jpg" alt="">
-<img src="QTA001 (230).jpg" alt="">
-<img src="QTA001 (231).jpg" alt="">
-<img src="QTA001 (232).jpg" alt="">
-<img src="QTA001 (233).jpg" alt="">
-<img src="QTA001 (234).jpg" alt="">
-<img src="QTA001 (235).jpg" alt="">
-<img src="QTA001 (236).jpg" alt="">
-<img src="QTA001 (237).jpg" alt="">
-<img src="QTA001 (238).jpg" alt="">
-<img src="QTA001 (239).jpg" alt="">
-<img src="QTA001 (240).jpg" alt="">
-<img src="QTA001 (241).jpg" alt="">
-<img src="QTA001 (242).jpg" alt="">
-<img src="QTA001 (243).jpg" alt="">
-<img src="QTA001 (244).jpg" alt="">
-<img src="QTA001 (245).jpg" alt="">
-<img src="QTA001 (246).jpg" alt="">
-<img src="QTA001 (247).jpg" alt="">
-<img src="QTA001 (248).jpg" alt="">
-<img src="QTA001 (249).jpg" alt="">
-<img src="QTA001 (250).jpg" alt="">
-<img src="QTA001 (251).jpg" alt="">
-<img src="QTA001 (252).jpg" alt="">
-<img src="QTA001 (253).jpg" alt="">
-<img src="QTA001 (254).jpg" alt="">
-<img src="QTA001 (255).jpg" alt="">
-
+  <div class="video-container">
+    <iframe width="720" height="405" src="https://www.youtube.com/embed/gUGvbqP0Zgk" title="Video Ngày Hội Ngộ" allowfullscreen></iframe>
   </div>
 
-  <h2 class="section-title" onclick="toggleGallery('gallery-resort')">🏖️ Ảnh chụp tại Resort Xuân Thành</h2>
-  <p class="description">
-    Khoảnh khắc ngập tràn tiếng cười và tình bạn tại khu nghỉ dưỡng sau buổi hội ngộ.
-  </p>
-  <div id="gallery-resort" class="image-gallery hidden">
-    <img src="QTA002 (1).jpg" alt="">
-   <img src="QTA002 (2).jpg" alt="">
-<img src="QTA002 (3).jpg" alt="">
-<img src="QTA002 (4).jpg" alt="">
-<img src="QTA002 (5).jpg" alt="">
-<img src="QTA002 (6).jpg" alt="">
-<img src="QTA002 (7).jpg" alt="">
-<img src="QTA002 (8).jpg" alt="">
-<img src="QTA002 (9).jpg" alt="">
-<img src="QTA002 (10).jpg" alt="">
-<img src="QTA002 (11).jpg" alt="">
-<img src="QTA002 (12).jpg" alt="">
-<img src="QTA002 (13).jpg" alt="">
-<img src="QTA002 (14).jpg" alt="">
-<img src="QTA002 (15).jpg" alt="">
-<img src="QTA002 (16).jpg" alt="">
-<img src="QTA002 (17).jpg" alt="">
-<img src="QTA002 (18).jpg" alt="">
-<img src="QTA002 (19).jpg" alt="">
-<img src="QTA002 (20).jpg" alt="">
-<img src="QTA002 (21).jpg" alt="">
-<img src="QTA002 (22).jpg" alt="">
-<img src="QTA002 (23).jpg" alt="">
-<img src="QTA002 (24).jpg" alt="">
-<img src="QTA002 (25).jpg" alt="">
-<img src="QTA002 (26).jpg" alt="">
-<img src="QTA002 (27).jpg" alt="">
-<img src="QTA002 (28).jpg" alt="">
-<img src="QTA002 (29).jpg" alt="">
-<img src="QTA002 (30).jpg" alt="">
-<img src="QTA002 (31).jpg" alt="">
-<img src="QTA002 (32).jpg" alt="">
-<img src="QTA002 (33).jpg" alt="">
-<img src="QTA002 (34).jpg" alt="">
-<img src="QTA002 (35).jpg" alt="">
-<img src="QTA002 (36).jpg" alt="">
-<img src="QTA002 (37).jpg" alt="">
-<img src="QTA002 (38).jpg" alt="">
-<img src="QTA002 (39).jpg" alt="">
-<img src="QTA002 (40).jpg" alt="">
-<img src="QTA002 (41).jpg" alt="">
-<img src="QTA002 (42).jpg" alt="">
-<img src="QTA002 (43).jpg" alt="">
-<img src="QTA002 (44).jpg" alt="">
-<img src="QTA002 (45).jpg" alt="">
-<img src="QTA002 (46).jpg" alt="">
-<img src="QTA002 (47).jpg" alt="">
-<img src="QTA002 (48).jpg" alt="">
-<img src="QTA002 (49).jpg" alt="">
-<img src="QTA002 (50).jpg" alt="">
-<img src="QTA002 (51).jpg" alt="">
-<img src="QTA002 (52).jpg" alt="">
-<img src="QTA002 (53).jpg" alt="">
-<img src="QTA002 (54).jpg" alt="">
-<img src="QTA002 (55).jpg" alt="">
-<img src="QTA002 (56).jpg" alt="">
-<img src="QTA002 (57).jpg" alt="">
-<img src="QTA002 (58).jpg" alt="">
-<img src="QTA002 (59).jpg" alt="">
-<img src="QTA002 (60).jpg" alt="">
-<img src="QTA002 (61).jpg" alt="">
-<img src="QTA002 (62).jpg" alt="">
-<img src="QTA002 (63).jpg" alt="">
-<img src="QTA002 (64).jpg" alt="">
-<img src="QTA002 (65).jpg" alt="">
-<img src="QTA002 (66).jpg" alt="">
-<img src="QTA002 (67).jpg" alt="">
-<img src="QTA002 (68).jpg" alt="">
-<img src="QTA002 (69).jpg" alt="">
-<img src="QTA002 (70).jpg" alt="">
-<img src="QTA002 (71).jpg" alt="">
-<img src="QTA002 (72).jpg" alt="">
-<img src="QTA002 (73).jpg" alt="">
-<img src="QTA002 (74).jpg" alt="">
-<img src="QTA002 (75).jpg" alt="">
-<img src="QTA002 (76).jpg" alt="">
-<img src="QTA002 (77).jpg" alt="">
-<img src="QTA002 (78).jpg" alt="">
-<img src="QTA002 (79).jpg" alt="">
-<img src="QTA002 (80).jpg" alt="">
-<img src="QTA002 (81).jpg" alt="">
-<img src="QTA002 (82).jpg" alt="">
-<img src="QTA002 (83).jpg" alt="">
-<img src="QTA002 (84).jpg" alt="">
-<img src="QTA002 (85).jpg" alt="">
-<img src="QTA002 (86).jpg" alt="">
-<img src="QTA002 (87).jpg" alt="">
-<img src="QTA002 (88).jpg" alt="">
-<img src="QTA002 (89).jpg" alt="">
-<img src="QTA002 (90).jpg" alt="">
-<img src="QTA002 (91).jpg" alt="">
-<img src="QTA002 (92).jpg" alt="">
-<img src="QTA002 (93).jpg" alt="">
-<img src="QTA002 (94).jpg" alt="">
-<img src="QTA002 (95).jpg" alt="">
-<img src="QTA002 (96).jpg" alt="">
-<img src="QTA002 (97).jpg" alt="">
-<img src="QTA002 (98).jpg" alt="">
-<img src="QTA002 (99).jpg" alt="">
-<img src="QTA002 (100).jpg" alt="">
-<img src="QTA002 (101).jpg" alt="">
-<img src="QTA002 (102).jpg" alt="">
-<img src="QTA002 (103).jpg" alt="">
-<img src="QTA002 (104).jpg" alt="">
-<img src="QTA002 (105).jpg" alt="">
-<img src="QTA002 (106).jpg" alt="">
-<img src="QTA002 (107).jpg" alt="">
-<img src="QTA002 (108).jpg" alt="">
-<img src="QTA002 (109).jpg" alt="">
-<img src="QTA002 (110).jpg" alt="">
-<img src="QTA002 (111).jpg" alt="">
-<img src="QTA002 (112).jpg" alt="">
-<img src="QTA002 (113).jpg" alt="">
-<img src="QTA002 (114).jpg" alt="">
-<img src="QTA002 (115).jpg" alt="">
-<img src="QTA002 (116).jpg" alt="">
-<img src="QTA002 (117).jpg" alt="">
-<img src="QTA002 (118).jpg" alt="">
-<img src="QTA002 (119).jpg" alt="">
-<img src="QTA002 (120).jpg" alt="">
-<img src="QTA002 (121).jpg" alt="">
-<img src="QTA002 (122).jpg" alt="">
-<img src="QTA002 (123).jpg" alt="">
-<img src="QTA002 (124).jpg" alt="">
-<img src="QTA002 (125).jpg" alt="">
-<img src="QTA002 (126).jpg" alt="">
-<img src="QTA002 (127).jpg" alt="">
-<img src="QTA002 (128).jpg" alt="">
-<img src="QTA002 (129).jpg" alt="">
-<img src="QTA002 (130).jpg" alt="">
-<img src="QTA002 (131).jpg" alt="">
-<img src="QTA002 (132).jpg" alt="">
-<img src="QTA002 (133).jpg" alt="">
-<img src="QTA002 (134).jpg" alt="">
-<img src="QTA002 (135).jpg" alt="">
-<img src="QTA002 (136).jpg" alt="">
-<img src="QTA002 (137).jpg" alt="">
-<img src="QTA002 (138).jpg" alt="">
-<img src="QTA002 (139).jpg" alt="">
-<img src="QTA002 (140).jpg" alt="">
-<img src="QTA002 (141).jpg" alt="">
-<img src="QTA002 (142).jpg" alt="">
-<img src="QTA002 (143).jpg" alt="">
-<img src="QTA002 (144).jpg" alt="">
-<img src="QTA002 (145).jpg" alt="">
-<img src="QTA002 (146).jpg" alt="">
-<img src="QTA002 (147).jpg" alt="">
-<img src="QTA002 (148).jpg" alt="">
-<img src="QTA002 (149).jpg" alt="">
-<img src="QTA002 (150).jpg" alt="">
-<img src="QTA002 (151).jpg" alt="">
-<img src="QTA002 (152).jpg" alt="">
-<img src="QTA002 (153).jpg" alt="">
-<img src="QTA002 (154).jpg" alt="">
-<img src="QTA002 (155).jpg" alt="">
-<img src="QTA002 (156).jpg" alt="">
-<img src="QTA002 (157).jpg" alt="">
-<img src="QTA002 (158).jpg" alt="">
-<img src="QTA002 (159).jpg" alt="">
-<img src="QTA002 (160).jpg" alt="">
-<img src="QTA002 (161).jpg" alt="">
-<img src="QTA002 (162).jpg" alt="">
-<img src="QTA002 (163).jpg" alt="">
-<img src="QTA002 (164).jpg" alt="">
-<img src="QTA002 (165).jpg" alt="">
-<img src="QTA002 (166).jpg" alt="">
-<img src="QTA002 (167).jpg" alt="">
-<img src="QTA002 (168).jpg" alt="">
-<img src="QTA002 (169).jpg" alt="">
-<img src="QTA002 (170).jpg" alt="">
-<img src="QTA002 (171).jpg" alt="">
-<img src="QTA002 (172).jpg" alt="">
-<img src="QTA002 (173).jpg" alt="">
-<img src="QTA002 (174).jpg" alt="">
-<img src="QTA002 (175).jpg" alt="">
-<img src="QTA002 (176).jpg" alt="">
-<img src="QTA002 (177).jpg" alt="">
-<img src="QTA002 (178).jpg" alt="">
-<img src="QTA002 (179).jpg" alt="">
-<img src="QTA002 (180).jpg" alt="">
-<img src="QTA002 (181).jpg" alt="">
-<img src="QTA002 (182).jpg" alt="">
-<img src="QTA002 (183).jpg" alt="">
-<img src="QTA002 (184).jpg" alt="">
-<img src="QTA002 (185).jpg" alt="">
-<img src="QTA002 (186).jpg" alt="">
-<img src="QTA002 (187).jpg" alt="">
-<img src="QTA002 (188).jpg" alt="">
-<img src="QTA002 (189).jpg" alt="">
-<img src="QTA002 (190).jpg" alt="">
-<img src="QTA002 (191).jpg" alt="">
-<img src="QTA002 (192).jpg" alt="">
-<img src="QTA002 (193).jpg" alt="">
-<img src="QTA002 (194).jpg" alt="">
-<img src="QTA002 (195).jpg" alt="">
-<img src="QTA002 (196).jpg" alt="">
-<img src="QTA002 (197).jpg" alt="">
-<img src="QTA002 (198).jpg" alt="">
-<img src="QTA002 (199).jpg" alt="">
-<img src="QTA002 (200).jpg" alt="">
-<img src="QTA002 (201).jpg" alt="">
-<img src="QTA002 (202).jpg" alt="">
-<img src="QTA002 (203).jpg" alt="">
-<img src="QTA002 (204).jpg" alt="">
-<img src="QTA002 (205).jpg" alt="">
-<img src="QTA002 (206).jpg" alt="">
-<img src="QTA002 (207).jpg" alt="">
-<img src="QTA002 (208).jpg" alt="">
-<img src="QTA002 (209).jpg" alt="">
-<img src="QTA002 (210).jpg" alt="">
-<img src="QTA002 (211).jpg" alt="">
-<img src="QTA002 (212).jpg" alt="">
-<img src="QTA002 (213).jpg" alt="">
-<img src="QTA002 (214).jpg" alt="">
-<img src="QTA002 (215).jpg" alt="">
-<img src="QTA002 (216).jpg" alt="">
-<img src="QTA002 (217).jpg" alt="">
-<img src="QTA002 (218).jpg" alt="">
-<img src="QTA002 (219).jpg" alt="">
-<img src="QTA002 (220).jpg" alt="">
-<img src="QTA002 (221).jpg" alt="">
-<img src="QTA002 (222).jpg" alt="">
-<img src="QTA002 (223).jpg" alt="">
-<img src="QTA002 (224).jpg" alt="">
-<img src="QTA002 (225).jpg" alt="">
-<img src="QTA002 (226).jpg" alt="">
-<img src="QTA002 (227).jpg" alt="">
-<img src="QTA002 (228).jpg" alt="">
-<img src="QTA002 (229).jpg" alt="">
-<img src="QTA002 (230).jpg" alt="">
-<img src="QTA002 (231).jpg" alt="">
-<img src="QTA002 (232).jpg" alt="">
-<img src="QTA002 (233).jpg" alt="">
-<img src="QTA002 (234).jpg" alt="">
-<img src="QTA002 (235).jpg" alt="">
-<img src="QTA002 (236).jpg" alt="">
-<img src="QTA002 (237).jpg" alt="">
-<img src="QTA002 (238).jpg" alt="">
-<img src="QTA002 (239).jpg" alt="">
-<img src="QTA002 (240).jpg" alt="">
-<img src="QTA002 (241).jpg" alt="">
-<img src="QTA002 (242).jpg" alt="">
-<img src="QTA002 (243).jpg" alt="">
-<img src="QTA002 (244).jpg" alt="">
-<img src="QTA002 (245).jpg" alt="">
-<img src="QTA002 (246).jpg" alt="">
-<img src="QTA002 (247).jpg" alt="">
-<img src="QTA002 (248).jpg" alt="">
-<img src="QTA002 (249).jpg" alt="">
-<img src="QTA002 (250).jpg" alt="">
-<img src="QTA002 (251).jpg" alt="">
-<img src="QTA002 (252).jpg" alt="">
-<img src="QTA002 (253).jpg" alt="">
-<img src="QTA002 (254).jpg" alt="">
-<img src="QTA002 (255).jpg" alt="">
-<img src="QTA002 (256).jpg" alt="">
-<img src="QTA002 (257).jpg" alt="">
-<img src="QTA002 (258).jpg" alt="">
-<img src="QTA002 (259).jpg" alt="">
-<img src="QTA002 (260).jpg" alt="">
-<img src="QTA002 (261).jpg" alt="">
-<img src="QTA002 (262).jpg" alt="">
-<img src="QTA002 (263).jpg" alt="">
-<img src="QTA002 (264).jpg" alt="">
-<img src="QTA002 (265).jpg" alt="">
-<img src="QTA002 (266).jpg" alt="">
-<img src="QTA002 (267).jpg" alt="">
-<img src="QTA002 (268).jpg" alt="">
-<img src="QTA002 (269).jpg" alt="">
-<img src="QTA002 (270).jpg" alt="">
-<img src="QTA002 (271).jpg" alt="">
-<img src="QTA002 (272).jpg" alt="">
-<img src="QTA002 (273).jpg" alt="">
-<img src="QTA002 (274).jpg" alt="">
-<img src="QTA002 (275).jpg" alt="">
-<img src="QTA002 (276).jpg" alt="">
-<img src="QTA002 (277).jpg" alt="">
-<img src="QTA002 (278).jpg" alt="">
-<img src="QTA002 (279).jpg" alt="">
-<img src="QTA002 (280).jpg" alt="">
-<img src="QTA002 (281).jpg" alt="">
-<img src="QTA002 (282).jpg" alt="">
-<img src="QTA002 (283).jpg" alt="">
-<img src="QTA002 (284).jpg" alt="">
-<img src="QTA002 (285).jpg" alt="">
-<img src="QTA002 (286).jpg" alt="">
-<img src="QTA002 (287).jpg" alt="">
-<img src="QTA002 (288).jpg" alt="">
-<img src="QTA002 (289).jpg" alt="">
-<img src="QTA002 (290).jpg" alt="">
-<img src="QTA002 (291).jpg" alt="">
-<img src="QTA002 (292).jpg" alt="">
-<img src="QTA002 (293).jpg" alt="">
-<img src="QTA002 (294).jpg" alt="">
-<img src="QTA002 (295).jpg" alt="">
-<img src="QTA002 (296).jpg" alt="">
-<img src="QTA002 (297).jpg" alt="">
-<img src="QTA002 (298).jpg" alt="">
-<img src="QTA002 (299).jpg" alt="">
-<img src="QTA002 (300).jpg" alt="">
-<img src="QTA002 (301).jpg" alt="">
-<img src="QTA002 (302).jpg" alt="">
-<img src="QTA002 (303).jpg" alt="">
-<img src="QTA002 (304).jpg" alt="">
-<img src="QTA002 (305).jpg" alt="">
-<img src="QTA002 (306).jpg" alt="">
-<img src="QTA002 (307).jpg" alt="">
-<img src="QTA002 (308).jpg" alt="">
-<img src="QTA002 (309).jpg" alt="">
-<img src="QTA002 (310).jpg" alt="">
-<img src="QTA002 (311).jpg" alt="">
-<img src="QTA002 (312).jpg" alt="">
-<img src="QTA002 (313).jpg" alt="">
-<img src="QTA002 (314).jpg" alt="">
-<img src="QTA002 (315).jpg" alt="">
-<img src="QTA002 (316).jpg" alt="">
-<img src="QTA002 (317).jpg" alt="">
-<img src="QTA002 (318).jpg" alt="">
-<img src="QTA002 (319).jpg" alt="">
-<img src="QTA002 (320).jpg" alt="">
-<img src="QTA002 (321).jpg" alt="">
-<img src="QTA002 (322).jpg" alt="">
-<img src="QTA002 (323).jpg" alt="">
-<img src="QTA002 (324).jpg" alt="">
-<img src="QTA002 (325).jpg" alt="">
-<img src="QTA002 (326).jpg" alt="">
-<img src="QTA002 (327).jpg" alt="">
-<img src="QTA002 (328).jpg" alt="">
-<img src="QTA002 (329).jpg" alt="">
-<img src="QTA002 (330).jpg" alt="">
-<img src="QTA002 (331).jpg" alt="">
-<img src="QTA002 (332).jpg" alt="">
-<img src="QTA002 (333).jpg" alt="">
-<img src="QTA002 (334).jpg" alt="">
-<img src="QTA002 (335).jpg" alt="">
-<img src="QTA002 (336).jpg" alt="">
-<img src="QTA002 (337).jpg" alt="">
-<img src="QTA002 (338).jpg" alt="">
-<img src="QTA002 (339).jpg" alt="">
-<img src="QTA002 (340).jpg" alt="">
-<img src="QTA002 (341).jpg" alt="">
-<img src="QTA002 (342).jpg" alt="">
-<img src="QTA002 (343).jpg" alt="">
-<img src="QTA002 (344).jpg" alt="">
-<img src="QTA002 (345).jpg" alt="">
-<img src="QTA002 (346).jpg" alt="">
-<img src="QTA002 (347).jpg" alt="">
-<img src="QTA002 (348).jpg" alt="">
-<img src="QTA002 (349).jpg" alt="">
-<img src="QTA002 (350).jpg" alt="">
-<img src="QTA002 (351).jpg" alt="">
-<img src="QTA002 (352).jpg" alt="">
-<img src="QTA002 (353).jpg" alt="">
-<img src="QTA002 (354).jpg" alt="">
-<img src="QTA002 (355).jpg" alt="">
-<img src="QTA002 (356).jpg" alt="">
-<img src="QTA002 (357).jpg" alt="">
-<img src="QTA002 (358).jpg" alt="">
-<img src="QTA002 (359).jpg" alt="">
-<img src="QTA002 (360).jpg" alt="">
-<img src="QTA002 (361).jpg" alt="">
-<img src="QTA002 (362).jpg" alt="">
-<img src="QTA002 (363).jpg" alt="">
-<img src="QTA002 (364).jpg" alt="">
-<img src="QTA002 (365).jpg" alt="">
-<img src="QTA002 (366).jpg" alt="">
-<img src="QTA002 (367).jpg" alt="">
-<img src="QTA002 (368).jpg" alt="">
-<img src="QTA002 (369).jpg" alt="">
-<img src="QTA002 (370).jpg" alt="">
-<img src="QTA002 (371).jpg" alt="">
-<img src="QTA002 (372).jpg" alt="">
-<img src="QTA002 (373).jpg" alt="">
-<img src="QTA002 (374).jpg" alt="">
-<img src="QTA002 (375).jpg" alt="">
-<img src="QTA002 (376).jpg" alt="">
-<img src="QTA002 (377).jpg" alt="">
-<img src="QTA002 (378).jpg" alt="">
-<img src="QTA002 (379).jpg" alt="">
-<img src="QTA002 (380).jpg" alt="">
-<img src="QTA002 (381).jpg" alt="">
-<img src="QTA002 (382).jpg" alt="">
-<img src="QTA002 (383).jpg" alt="">
-<img src="QTA002 (384).jpg" alt="">
-<img src="QTA002 (385).jpg" alt="">
-<img src="QTA002 (386).jpg" alt="">
-<img src="QTA002 (387).jpg" alt="">
-<img src="QTA002 (388).jpg" alt="">
-<img src="QTA002 (389).jpg" alt="">
-<img src="QTA002 (390).jpg" alt="">
-<img src="QTA002 (391).jpg" alt="">
-<img src="QTA002 (392).jpg" alt="">
-<img src="QTA002 (393).jpg" alt="">
-<img src="QTA002 (394).jpg" alt="">
-<img src="QTA002 (395).jpg" alt="">
-<img src="QTA002 (396).jpg" alt="">
-<img src="QTA002 (397).jpg" alt="">
-<img src="QTA002 (398).jpg" alt="">
-<img src="QTA002 (399).jpg" alt="">
-<img src="QTA002 (400).jpg" alt="">
-<img src="QTA002 (401).jpg" alt="">
-<img src="QTA002 (402).jpg" alt="">
-<img src="QTA002 (403).jpg" alt="">
-<img src="QTA002 (404).jpg" alt="">
-<img src="QTA002 (405).jpg" alt="">
-<img src="QTA002 (406).jpg" alt="">
-<img src="QTA002 (407).jpg" alt="">
-<img src="QTA002 (408).jpg" alt="">
-<img src="QTA002 (409).jpg" alt="">
-<img src="QTA002 (410).jpg" alt="">
-<img src="QTA002 (411).jpg" alt="">
-<img src="QTA002 (412).jpg" alt="">
-<img src="QTA002 (413).jpg" alt="">
-<img src="QTA002 (414).jpg" alt="">
-<img src="QTA002 (415).jpg" alt="">
-<img src="QTA002 (416).jpg" alt="">
-<img src="QTA002 (417).jpg" alt="">
-<img src="QTA002 (418).jpg" alt="">
-<img src="QTA002 (419).jpg" alt="">
-<img src="QTA002 (420).jpg" alt="">
-<img src="QTA002 (421).jpg" alt="">
-<img src="QTA002 (422).jpg" alt="">
-<img src="QTA002 (423).jpg" alt="">
-<img src="QTA002 (424).jpg" alt="">
-<img src="QTA002 (425).jpg" alt="">
-<img src="QTA002 (426).jpg" alt="">
-<img src="QTA002 (427).jpg" alt="">
-<img src="QTA002 (428).jpg" alt="">
-<img src="QTA002 (429).jpg" alt="">
-<img src="QTA002 (430).jpg" alt="">
-<img src="QTA002 (431).jpg" alt="">
-<img src="QTA002 (432).jpg" alt="">
-<img src="QTA002 (433).jpg" alt="">
-<img src="QTA002 (434).jpg" alt="">
-<img src="QTA002 (435).jpg" alt="">
-<img src="QTA002 (436).jpg" alt="">
-<img src="QTA002 (437).jpg" alt="">
-<img src="QTA002 (438).jpg" alt="">
-<img src="QTA002 (439).jpg" alt="">
-<img src="QTA002 (440).jpg" alt="">
-<img src="QTA002 (441).jpg" alt="">
-<img src="QTA002 (442).jpg" alt="">
-<img src="QTA002 (443).jpg" alt="">
-<img src="QTA002 (444).jpg" alt="">
-<img src="QTA002 (445).jpg" alt="">
-<img src="QTA002 (446).jpg" alt="">
-<img src="QTA002 (447).jpg" alt="">
-<img src="QTA002 (448).jpg" alt="">
-<img src="QTA002 (449).jpg" alt="">
-<img src="QTA002 (450).jpg" alt="">
-<img src="QTA002 (451).jpg" alt="">
-<img src="QTA002 (452).jpg" alt="">
-<img src="QTA002 (453).jpg" alt="">
-<img src="QTA002 (454).jpg" alt="">
-<img src="QTA002 (455).jpg" alt="">
-<img src="QTA002 (456).jpg" alt="">
-<img src="QTA002 (457).jpg" alt="">
-<img src="QTA002 (458).jpg" alt="">
+  <div class="gallery-section" id="truong">
+    <h2 class="section-title">📸 Ảnh chụp tại Trường xưa</h2>
+    <div class="gallery">
+      <!-- Chèn ảnh đại diện nhóm, ví dụ 20 ảnh đầu tiên -->
+      <img src="QTA001 (1).jpg" alt="">
+      <img src="QTA001 (2).jpg" alt="">
+      <img src="QTA001 (3).jpg" alt="">
+      <img src="QTA001 (4).jpg" alt="">
+      <!-- ... Thêm ảnh nếu cần -->
+    </div>
+  </div>
 
+  <div class="gallery-section" id="resort">
+    <h2 class="section-title">🏖️ Ảnh chụp tại Resort Xuân Thành</h2>
+    <div class="gallery">
+      <img src="QTA002 (1).jpg" alt="">
+      <img src="QTA002 (2).jpg" alt="">
+      <img src="QTA002 (3).jpg" alt="">
+      <img src="QTA002 (4).jpg" alt="">
+      <!-- ... Thêm ảnh nếu cần -->
+    </div>
+  </div>
 
+  <div class="back-home">
+    <a href="index.html">← Quay về Trang Chủ</a>
   </div>
 </body>
 </html>
