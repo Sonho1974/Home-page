@@ -101,15 +101,59 @@
   </header>
 
   <nav class="main-menu">
-    <ul>
-      <li><a href="index.html">🏠</a></li>
-      <li><a href="trang-tho.html">Trang Thơ</a></li>
-      <li><a href="Luu-niem.html">Lưu Niệm</a></li>
-      <li><a href="#">Khoa học</a></li>
-      <li><a href="#">Video</a></li>
-      <li><a href="#">Góc nhìn</a></li>
-      <li><a href="#">Giải trí</a></li>
-     <li class="dropdown">
+  <style>
+  /* Đã có các style khác ở trên, giờ thêm dropdown */
+  .dropdown {
+    position: relative;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #343a40;
+    min-width: 180px;
+    z-index: 1;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  }
+  .dropdown-content li {
+    text-align: left;
+    margin: 0;
+  }
+  .dropdown-content li a {
+    display: block;
+    padding: 10px 15px;
+    font-size: 15px;
+    color: white;
+  }
+  .dropdown-content li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+</style>
+
+<nav class="main-menu">
+  <ul>
+    <li><a href="index.html">🏠</a></li>
+    <li><a href="trang-tho.html">Trang Thơ</a></li>
+    <li><a href="Luu-niem.html">Lưu Niệm</a></li>
+
+    <li class="dropdown">
+      <a href="#">Khoa học ▼</a>
+      <ul class="dropdown-content">
+        <li><a href="kien-thuc-chung.html">1. Kiến thức chung, cơ bản</a></li>
+        <li><a href="visual-basic.html">2. Visual Basic trong Excel</a></li>
+        <li><a href="van-hanh-nhiet-dien.html">3. Vận hành Nhà máy Nhiệt điện</a></li>
+        <li><a href="dao-tao-ky-nang-mem.html">4. Đào tạo kỹ năng mềm</a></li>
+      </ul>
+    </li>
+
+    <li><a href="#">Video</a></li>
+    <li><a href="#">Góc nhìn</a></li>
+    <li><a href="#">Giải trí</a></li>
+    
+    <li class="dropdown">
       <a href="#">Thư giãn ▼</a>
       <ul class="dropdown-content">
         <li><a href="cuoi.html">Cười</a></li>
@@ -117,8 +161,8 @@
         <li><a href="chuyen-la.html">Chuyện lạ</a></li>
       </ul>
     </li>
-    </ul>
-  </nav>
+  </ul>
+</nav>
 
   <div class="datetime">
     <span id="datetime"></span>
