@@ -201,6 +201,27 @@
     updateDateTime();
     setInterval(updateDateTime, 1000);
   </script>
+    <script>
+  function toggleDropdown(event, element) {
+    event.preventDefault();
+    const dropdown = element.nextElementSibling;
+    dropdown.classList.toggle("show");
+
+    // Ẩn các dropdown khác nếu có
+    document.querySelectorAll('.dropdown-content').forEach(menu => {
+      if (menu !== dropdown) {
+        menu.classList.remove("show");
+      }
+    });
+
+    // Ẩn dropdown nếu click ngoài vùng menu
+    document.addEventListener("click", function(e) {
+      if (!element.parentElement.contains(e.target)) {
+        dropdown.classList.remove("show");
+      }
+    }, { once: true });
+  }
+</script>
 </body>
 </html>
 
