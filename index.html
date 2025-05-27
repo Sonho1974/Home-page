@@ -53,7 +53,11 @@
       background-color: rgba(255,255,255,0.1);
     }
 
-    .dropdown-content {
+    nav.main-menu ul li:hover .dropdown-content {
+      display: block;
+    }
+
+    nav.main-menu ul li .dropdown-content {
       display: none;
       position: absolute;
       top: 100%;
@@ -73,9 +77,6 @@
     }
     .dropdown-content li a:hover {
       background-color: rgba(255, 255, 255, 0.1);
-    }
-    .dropdown-content.show {
-      display: block;
     }
 
     .datetime {
@@ -139,7 +140,7 @@
       <li><a href="Luu-niem.html">Lưu Niệm</a></li>
 
       <li class="dropdown">
-        <a href="#" onclick="toggleDropdown(event, this)">Khoa học ▼</a>
+        <a href="#">Khoa học ▼</a>
         <ul class="dropdown-content">
           <li><a href="kien-thuc-chung.html">1. Kiến thức chung, cơ bản</a></li>
           <li><a href="visual-basic.html">2. Visual Basic trong Excel</a></li>
@@ -153,7 +154,7 @@
       <li><a href="#">Giải trí</a></li>
 
       <li class="dropdown">
-        <a href="#" onclick="toggleDropdown(event, this)">Thư giãn ▼</a>
+        <a href="#">Thư giãn ▼</a>
         <ul class="dropdown-content">
           <li><a href="cuoi.html">Cười</a></li>
           <li><a href="do-vui.html">Đố vui</a></li>
@@ -197,24 +198,6 @@
     }
     updateDateTime();
     setInterval(updateDateTime, 1000);
-
-    function toggleDropdown(event, element) {
-      event.preventDefault();
-      const dropdown = element.nextElementSibling;
-      dropdown.classList.toggle("show");
-
-      document.querySelectorAll('.dropdown-content').forEach(menu => {
-        if (menu !== dropdown) {
-          menu.classList.remove("show");
-        }
-      });
-
-      document.addEventListener("click", function(e) {
-        if (!element.parentElement.contains(e.target)) {
-          dropdown.classList.remove("show");
-        }
-      }, { once: true });
-    }
   </script>
 </body>
 </html>
