@@ -151,4 +151,17 @@ body {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #343a40;
+  min-width: 200px;
+  z-index: 1;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.dropdown-content.show {
+  display: block;
+}
 
