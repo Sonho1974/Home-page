@@ -2,10 +2,24 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
+    
 }
 .top-bar, .main-menu {
     background-color: #fff;
     padding: 10px 20px;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #343a40;
+  min-width: 200px;
+  z-index: 1;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.dropdown-content.show {
+  display: block;
 }
 .logo img {
     height: 40px;
