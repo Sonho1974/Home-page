@@ -1,73 +1,163 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vận Hành Nhà Máy Nhiệt Điện</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hướng Dẫn Vận Hành</title>
   <style>
-    body { font-family: 'Roboto', sans-serif; margin: 0; background: #eef1f4; color: #333; }
-    header {
-      background: linear-gradient(to right, #1e3c72, #2a5298);
-      padding: 40px 20px;
+    /* Đặt phông chữ chung và nền trang */
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+    /* Tiêu đề chính của trang */
+    h1 {
       text-align: center;
-      color: white;
+      margin: 20px 0;
+      font-size: 2em;
     }
-    header h1 { font-family: 'Playfair Display', serif; font-size: 36px; margin: 0; }
-    .section {
-      padding: 30px 20px;
+    /* Thanh menu chính (nav bar) */
+    nav ul {
+      list-style: none;               /* Bỏ ký hiệu đầu dòng */
+      margin: 0;
+      padding: 0;
+      background-color: #004080;      /* Nền xanh đậm cho thanh menu */
       display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      justify-content: center;
+      justify-content: center;        /* Căn giữa các mục menu */
+      flex-wrap: wrap;                /* Cho phép xuống hàng nếu màn hình hẹp */
     }
-    .card {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      max-width: 350px;
-      overflow: hidden;
+    nav ul li {
+      position: relative;             /* Để chứa menu con tuyệt đối */
     }
-    .card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
+    /* Liên kết mục chính của menu */
+    nav ul li a {
+      display: block;
+      padding: 10px 15px;
+      color: #fff;
+      text-decoration: none;
     }
-    .card h3 { padding: 15px; font-size: 20px; margin: 0; color: #2c3e50; }
-    .card p { padding: 0 15px 15px; font-size: 15px; color: #555; }
+    /* Thêm biểu tượng mũi tên ▼ cho các mục chính có menu con */
+    nav ul li > a:after {
+      content: " \25BE";              /* Mã Unicode cho dấu tam giác xuống */
+      font-size: 0.8em;
+      color: inherit;                /* Kế thừa màu chữ (màu trắng) */
+    }
+    /* Đổi màu nền mục chính khi hover hoặc khi focus (menu đang mở) */
+    nav ul li:hover > a, nav ul li:focus-within > a {
+      background-color: #006699;     /* Màu xanh sáng hơn khi hover */
+    }
+    /* Menu thả xuống (danh sách con) ẩn theo mặc định */
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      top: 100%;                     /* Canh trên của menu con ngay sát dưới mục chính */
+      left: 0;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;        /* Nền trắng cho menu con */
+      border: 1px solid #ccc;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);  /* Đổ bóng nhẹ cho menu con */
+      z-index: 1000;
+      min-width: 200px;              /* Đảm bảo menu con có độ rộng tối thiểu */
+    }
+    /* Hiển thị menu con khi hover vào mục cha hoặc mục cha được focus */
+    nav ul li:hover > ul, nav ul li:focus-within > ul {
+      display: block;
+    }
+    /* Mục con trong menu thả xuống */
+    nav ul li ul li a {
+      display: block;
+      padding: 8px 15px;
+      color: #333;
+      text-decoration: none;
+      background-color: #fff;
+    }
+    /* Đổi màu nền mục con khi hover */
+    nav ul li ul li a:hover {
+      background-color: #f2f2f2;     /* Nền xám nhạt khi hover mục con */
+    }
+    /* Giữ màu chữ của link kể cả khi đã truy cập */
+    nav ul li a:visited {
+      color: #fff;
+    }
+    nav ul li ul li a:visited {
+      color: #333;
+    }
+    /* Thiết kế đáp ứng: xếp chồng menu theo cột trên màn hình nhỏ */
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;      /* Chuyển menu chính thành cột dọc */
+        align-items: center;
+      }
+      nav ul li {
+        width: 100%;                /* Mỗi mục chính rộng 100% màn hình */
+      }
+      nav ul li a {
+        padding: 12px 15px;
+      }
+      nav ul li ul {
+        position: static;           /* Menu con bật lên chiếm không gian thay vì phủ lên */
+        width: 100%;
+      }
+      nav ul li ul li a {
+        padding-left: 30px;         /* Thụt vào cho mục con để phân cấp */
+      }
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Vận Hành Nhà Máy Nhiệt Điện</h1>
-    <p>Chia sẻ kinh nghiệm thực tế từ quá trình điều hành sản xuất điện năng.</p>
-   
-  </header>
+  <!-- Tiêu đề trang -->
+  <h1>Hướng Dẫn Vận Hành - Video Hướng Dẫn</h1>
 
-  <section class="section">
-    <div class="card">
-      <img src="https://source.unsplash.com/350x180/?powerplant,boiler" alt="Lò hơi nhiệt điện">
-      <h3>Hệ thống Lò hơi – Tuabin</h3>
-      <p>Nguyên lý hoạt động, giám sát nhiệt độ, áp suất, bảo vệ quá nhiệt/quá áp.</p>
-    </div>
-    <div class="card">
-      <img src="https://source.unsplash.com/350x180/?coal,conveyor" alt="Vận chuyển than">
-      <h3>Hệ thống cấp liệu & vận chuyển than</h3>
-      <p>Giám sát băng tải, máy cấp liệu, bunker, quản lý chất lượng than đốt.</p>
-    </div>
-    <div class="card">
-      <img src="https://source.unsplash.com/350x180/?controlroom,scada" alt="Phòng điều khiển">
-      <h3>Phòng điều khiển trung tâm</h3>
-      <p>Vận hành hệ thống DCS, SCADA, xử lý báo động và tối ưu hóa chu trình đốt.</p>
-        <section class="poem">
-    <h2>Hướng dẫn vận hành nhà máy nhiệt điện</h2>
-        <p><em>Video Hướng Dẫn Làm Giấy phép, LOTO...<br><br>
-         <a href="Hướng dẫn sử dụng phần mềm vận hành AES-Mông Dương.url" target="_blank">📄 Xem hướng dẫn theo kênh Youtube</a><br> <br> 
-            "Một video hướng dẫn chi tiết về cách tạo giấy phép, LOTO... cho nhân viên vận hành<br>
-            Các bạn vào xem video và góp ý để chúng tôi cải tiến thêm nhé, xin cảm ơn .<br><br>
-       
-</em></p>
-    </div>
-  </section>
+  <!-- Thanh điều hướng với menu thả xuống -->
+  <nav>
+    <ul>
+      <!-- Menu chính: Lò hơi -->
+      <li><a href="#">Lò hơi</a>
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=iKdBFugp3qA" target="_blank">Khởi Động Lò và Mồi Lò (Lò hơi tầng sôi)</a></li>
+          <li><a href="https://www.youtube.com/watch?v=XsBjVAe5UBg" target="_blank">Cấp hơi, Tăng/Giảm Tải, Dừng Lò (Lò hơi ghi xích)</a></li>
+        </ul>
+      </li>
+      <!-- Menu chính: Cấp than -->
+      <li><a href="#">Cấp than</a>
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=FRYg49XPhmY" target="_blank">Hệ thống băng tải vận chuyển than</a></li>
+          <li><a href="https://www.youtube.com/watch?v=ckKcQWHPg28" target="_blank">Khởi Động Lò hơi (lò ghi xích)</a></li>
+        </ul>
+      </li>
+      <!-- Menu chính: Điều khiển -->
+      <li><a href="#">Điều khiển</a>
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=XBzCxumSHJg" target="_blank">Điều Khiển Tủ Điện SCADA (Lò hơi tầng sôi)</a></li>
+          <li><a href="https://www.youtube.com/watch?v=tEGFNsJoOe0" target="_blank">Tủ điều khiển nhiệt độ tự động</a></li>
+        </ul>
+      </li>
+      <!-- Menu chính: An toàn -->
+      <li><a href="#">An toàn</a>
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=WJbYwTkIT4k" target="_blank">An Toàn Vận Hành Lò Hơi (Phần 1)</a></li>
+          <li><a href="https://www.youtube.com/watch?v=0jMLiYLikn0" target="_blank">An Toàn Vận Hành Lò Hơi (Phần 2)</a></li>
+        </ul>
+      </li>
+      <!-- Menu chính: Bảo trì -->
+      <li><a href="#">Bảo trì</a>
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=3ueMKRUgqXQ" target="_blank">Nguyên lý & Bảo Trì Lò hơi</a></li>
+          <li><a href="https://www.youtube.com/watch?v=7u8zMyntCWQ" target="_blank">Bảo Dưỡng Lò hơi Tầng Sôi</a></li>
+        </ul>
+      </li>
+      <!-- Menu chính: Hệ thống điện -->
+      <li><a href="#">Hệ thống điện</a>
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=UgZBYO-0FZE" target="_blank">Vận hành Máy Phát điện 1000kVA</a></li>
+          <li><a href="https://www.youtube.com/watch?v=vXMrQ0xcPVE" target="_blank">Cách Đấu Aptomat Bảo Vệ Hệ Thống Điện</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
 </body>
 </html>
