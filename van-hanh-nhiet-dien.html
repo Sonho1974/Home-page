@@ -3,158 +3,136 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hướng Dẫn Vận Hành</title>
+  <title>Hướng Dẫn Vận Hành - Video Hướng Dẫn</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
   <style>
-    /* Đặt phông chữ chung và nền trang */
     body {
-      font-family: Arial, Helvetica, sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to bottom right, #e0f7fa, #ffffff);
     }
-    /* Tiêu đề chính của trang */
     h1 {
       text-align: center;
       margin: 20px 0;
-      font-size: 2em;
+      font-size: 2.2em;
+      color: #004d40;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
     }
-    /* Thanh menu chính (nav bar) */
     nav ul {
-      list-style: none;               /* Bỏ ký hiệu đầu dòng */
-      margin: 0;
-      padding: 0;
-      background-color: #004080;      /* Nền xanh đậm cho thanh menu */
-      display: flex;
-      justify-content: center;        /* Căn giữa các mục menu */
-      flex-wrap: wrap;                /* Cho phép xuống hàng nếu màn hình hẹp */
-    }
-    nav ul li {
-      position: relative;             /* Để chứa menu con tuyệt đối */
-    }
-    /* Liên kết mục chính của menu */
-    nav ul li a {
-      display: block;
-      padding: 10px 15px;
-      color: #fff;
-      text-decoration: none;
-    }
-    /* Thêm biểu tượng mũi tên ▼ cho các mục chính có menu con */
-    nav ul li > a:after {
-      content: " \25BE";              /* Mã Unicode cho dấu tam giác xuống */
-      font-size: 0.8em;
-      color: inherit;                /* Kế thừa màu chữ (màu trắng) */
-    }
-    /* Đổi màu nền mục chính khi hover hoặc khi focus (menu đang mở) */
-    nav ul li:hover > a, nav ul li:focus-within > a {
-      background-color: #006699;     /* Màu xanh sáng hơn khi hover */
-    }
-    /* Menu thả xuống (danh sách con) ẩn theo mặc định */
-    nav ul li ul {
-      display: none;
-      position: absolute;
-      top: 100%;                     /* Canh trên của menu con ngay sát dưới mục chính */
-      left: 0;
       list-style: none;
       margin: 0;
       padding: 0;
-      background-color: #fff;        /* Nền trắng cho menu con */
-      border: 1px solid #ccc;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);  /* Đổ bóng nhẹ cho menu con */
-      z-index: 1000;
-      min-width: 200px;              /* Đảm bảo menu con có độ rộng tối thiểu */
+      background-color: #0288d1;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
     }
-    /* Hiển thị menu con khi hover vào mục cha hoặc mục cha được focus */
-    nav ul li:hover > ul, nav ul li:focus-within > ul {
+    nav ul li {
+      position: relative;
+    }
+    nav ul li a {
       display: block;
-    }
-    /* Mục con trong menu thả xuống */
-    nav ul li ul li a {
-      display: block;
-      padding: 8px 15px;
-      color: #333;
-      text-decoration: none;
-      background-color: #fff;
-    }
-    /* Đổi màu nền mục con khi hover */
-    nav ul li ul li a:hover {
-      background-color: #f2f2f2;     /* Nền xám nhạt khi hover mục con */
-    }
-    /* Giữ màu chữ của link kể cả khi đã truy cập */
-    nav ul li a:visited {
+      padding: 12px 20px;
       color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      transition: background 0.3s;
     }
-    nav ul li ul li a:visited {
+    nav ul li > a:after {
+      content: " \25BE";
+      font-size: 0.8em;
+    }
+    nav ul li:hover > a, nav ul li:focus-within > a {
+      background-color: #03a9f4;
+    }
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      z-index: 1000;
+      min-width: 220px;
+    }
+    nav ul li:hover > ul,
+    nav ul li:focus-within > ul {
+      display: block;
+    }
+    nav ul li ul li a {
       color: #333;
+      padding: 10px 20px;
+      background-color: #fff;
+      text-decoration: none;
+      display: block;
     }
-    /* Thiết kế đáp ứng: xếp chồng menu theo cột trên màn hình nhỏ */
+    nav ul li ul li a:hover {
+      background-color: #e0f7fa;
+    }
     @media (max-width: 600px) {
       nav ul {
-        flex-direction: column;      /* Chuyển menu chính thành cột dọc */
-        align-items: center;
+        flex-direction: column;
       }
       nav ul li {
-        width: 100%;                /* Mỗi mục chính rộng 100% màn hình */
-      }
-      nav ul li a {
-        padding: 12px 15px;
-      }
-      nav ul li ul {
-        position: static;           /* Menu con bật lên chiếm không gian thay vì phủ lên */
         width: 100%;
       }
-      nav ul li ul li a {
-        padding-left: 30px;         /* Thụt vào cho mục con để phân cấp */
+      nav ul li ul {
+        position: static;
       }
+      nav ul li ul li a {
+        padding-left: 30px;
+      }
+    }
+    .background-image {
+      background-image: url('Minhhoa2.gif');
+      background-size: cover;
+      background-position: center;
+      height: 200px;
+      border-bottom: 5px solid #0288d1;
     }
   </style>
 </head>
 <body>
-  <!-- Tiêu đề trang -->
+  <div class="background-image"></div>
   <h1>Hướng Dẫn Vận Hành - Video Hướng Dẫn</h1>
-
-  <!-- Thanh điều hướng với menu thả xuống -->
   <nav>
     <ul>
-      <!-- Menu chính: Lò hơi -->
       <li><a href="#">Lò hơi</a>
         <ul>
-          <li><a href="https://www.youtube.com/watch?v=iKdBFugp3qA" target="_blank">Khởi Động Lò và Mồi Lò (Lò hơi tầng sôi)</a></li>
-          <li><a href="https://www.youtube.com/watch?v=XsBjVAe5UBg" target="_blank">Cấp hơi, Tăng/Giảm Tải, Dừng Lò (Lò hơi ghi xích)</a></li>
+          <li><a href="https://www.youtube.com/watch?v=iKdBFugp3qA" target="_blank">Khởi Động Lò - Tầng Sôi</a></li>
+          <li><a href="https://www.youtube.com/watch?v=XsBjVAe5UBg" target="_blank">Dừng Lò - Ghi Xích</a></li>
         </ul>
       </li>
-      <!-- Menu chính: Cấp than -->
       <li><a href="#">Cấp than</a>
         <ul>
-          <li><a href="https://www.youtube.com/watch?v=FRYg49XPhmY" target="_blank">Hệ thống băng tải vận chuyển than</a></li>
-          <li><a href="https://www.youtube.com/watch?v=ckKcQWHPg28" target="_blank">Khởi Động Lò hơi (lò ghi xích)</a></li>
+          <li><a href="https://www.youtube.com/watch?v=FRYg49XPhmY" target="_blank">Băng Tải</a></li>
+          <li><a href="https://www.youtube.com/watch?v=ckKcQWHPg28" target="_blank">Cấp Liệu</a></li>
         </ul>
       </li>
-      <!-- Menu chính: Điều khiển -->
       <li><a href="#">Điều khiển</a>
         <ul>
-          <li><a href="https://www.youtube.com/watch?v=XBzCxumSHJg" target="_blank">Điều Khiển Tủ Điện SCADA (Lò hơi tầng sôi)</a></li>
-          <li><a href="https://www.youtube.com/watch?v=tEGFNsJoOe0" target="_blank">Tủ điều khiển nhiệt độ tự động</a></li>
+          <li><a href="https://www.youtube.com/watch?v=XBzCxumSHJg" target="_blank">Tủ SCADA</a></li>
+          <li><a href="https://www.youtube.com/watch?v=tEGFNsJoOe0" target="_blank">Tự Động Hóa</a></li>
         </ul>
       </li>
-      <!-- Menu chính: An toàn -->
       <li><a href="#">An toàn</a>
         <ul>
-          <li><a href="https://www.youtube.com/watch?v=WJbYwTkIT4k" target="_blank">An Toàn Vận Hành Lò Hơi (Phần 1)</a></li>
-          <li><a href="https://www.youtube.com/watch?v=0jMLiYLikn0" target="_blank">An Toàn Vận Hành Lò Hơi (Phần 2)</a></li>
+          <li><a href="https://www.youtube.com/watch?v=WJbYwTkIT4k" target="_blank">An Toàn Lò Hồi 1</a></li>
+          <li><a href="https://www.youtube.com/watch?v=0jMLiYLikn0" target="_blank">An Toàn Lò Hồi 2</a></li>
         </ul>
       </li>
-      <!-- Menu chính: Bảo trì -->
       <li><a href="#">Bảo trì</a>
         <ul>
-          <li><a href="https://www.youtube.com/watch?v=3ueMKRUgqXQ" target="_blank">Nguyên lý & Bảo Trì Lò hơi</a></li>
-          <li><a href="https://www.youtube.com/watch?v=7u8zMyntCWQ" target="_blank">Bảo Dưỡng Lò hơi Tầng Sôi</a></li>
+          <li><a href="https://www.youtube.com/watch?v=3ueMKRUgqXQ" target="_blank">Nguyên Lý BT</a></li>
+          <li><a href="https://www.youtube.com/watch?v=7u8zMyntCWQ" target="_blank">Bảo Dưỡng</a></li>
         </ul>
       </li>
-      <!-- Menu chính: Hệ thống điện -->
       <li><a href="#">Hệ thống điện</a>
         <ul>
-          <li><a href="https://www.youtube.com/watch?v=UgZBYO-0FZE" target="_blank">Vận hành Máy Phát điện 1000kVA</a></li>
-          <li><a href="https://www.youtube.com/watch?v=vXMrQ0xcPVE" target="_blank">Cách Đấu Aptomat Bảo Vệ Hệ Thống Điện</a></li>
+          <li><a href="https://www.youtube.com/watch?v=UgZBYO-0FZE" target="_blank">Máy phát 1000kVA</a></li>
+          <li><a href="https://www.youtube.com/watch?v=vXMrQ0xcPVE" target="_blank">Đấu Aptomat</a></li>
         </ul>
       </li>
     </ul>
