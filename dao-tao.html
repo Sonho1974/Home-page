@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đào Tạo - Vận Hành</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #005f99;
+      padding: 20px;
+      text-align: center;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    nav {
+      background: #0077cc;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+    }
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropbtn {
+      background-color: #0077cc;
+      color: white;
+      padding: 14px 20px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 250px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    .dropdown-content .sub-dropdown {
+      position: relative;
+    }
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .sub-dropdown-content {
+      display: none;
+      position: absolute;
+      left: 100%;
+      top: 0;
+      background-color: #f9f9f9;
+      min-width: 250px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    }
+    .sub-dropdown:hover .sub-dropdown-content {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header>Hướng Dẫn Vận Hành - Đào Tạo</header>
+  <nav>
+    <div class="dropdown">
+      <button class="dropbtn">Đào Tạo</button>
+      <div class="dropdown-content">
+        <div class="sub-dropdown">
+          <a href="#">Hướng dẫn chung</a>
+          <div class="sub-dropdown-content">
+            <a href="#">1. Hướng dẫn an toàn cơ bản</a>
+            <a href="#">2. Tổng quan nhà máy</a>
+          </div>
+        </div>
+        <div class="sub-dropdown">
+          <a href="#">Đào tạo vận hành Cấp liệu</a>
+          <div class="sub-dropdown-content">
+            <a href="#">1. An Toàn</a>
+            <a href="#">2. Sơ đồ nguyên lý</a>
+            <a href="#">3. Tổng quan hệ thống cung cấp nhiên liệu</a>
+            <a href="#">4. Các quy trình vận hành đã được phê duyệt</a>
+            <div class="sub-dropdown">
+              <a href="#"> &nbsp;&nbsp;↳ Chi tiết quy trình</a>
+              <div class="sub-dropdown-content">
+                <a href="#">4.1 Vận hành line nhận than</a>
+                <a href="#">4.2 Vận hành line cấp than</a>
+                <a href="#">4.3 Vận hành máy cào than</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</body>
+</html>
