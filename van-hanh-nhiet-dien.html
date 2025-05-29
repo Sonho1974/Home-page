@@ -110,49 +110,54 @@
           <li><a href="https://www.youtube.com/watch?v=FRYg49XPhmY" target="_blank">Băng Tải</a></li>
           <li><a href="https://www.youtube.com/watch?v=ckKcQWHPg28" target="_blank">Cấp Liệu</a></li>
         </ul>
-        
- <li>
-        <a href="#">Đào Tạo ▾</a>
-        <ul>
-          <li>
-            <a href="#">Đào tạo chung ▸</a>
-            <ul>
-              <li><a href="https://example.com/daotao_chung1.pdf" target="_blank">Giới thiệu vận hành</a></li>
-              <li><a href="https://example.com/daotao_chung2.pdf" target="_blank">Quy trình an toàn</a></li>
-               <li><a href="https://www.youtube.com/playlist?list=PL0qPw6nTZWc-FDs9ZjkEvuYmjOdL9djGo" target="_blank">Hướng dẫn làm giấy phép, LoTo..</a></li>
-              <li><a href="https://www.youtube.com/watch?v=YDMen23YDbI" target="_blank">Using LOTO associated with Work Permit & Close a LOTO</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">Đào tạo cấp liệu than ▸</a>
-            <ul>
-              <li><a href="https://example.com/caplieu1.pdf" target="_blank">Cấu trúc hệ thống</a></li>
-              <li><a href="https://example.com/caplieu2.pdf" target="_blank">Video mô phỏng</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">Đào tạo vận hành BOP ▸</a>
-            <ul>
-              <li><a href="https://example.com/bop1.pdf" target="_blank">LT & LOTO</a></li>
-              <li><a href="https://example.com/bop2.pdf" target="_blank">Giấy phép công việc</a></li>
-            </ul>
-          </li>
+     ---------------------------------------------   
+<ul>
+  <li class="dropdown">
+    <a href="#" onclick="toggleMenu(event)">Đào Tạo ▾</a>
+    <ul class="submenu">
+      <li class="has-submenu">
+        <a href="#" onclick="toggleMenu(event)">Đào tạo chung ▸</a>
+        <ul class="submenu">
+          <li><a href="https://example.com/daotao_chung1.pdf" target="_blank">Giới thiệu vận hành</a></li>
+          <li><a href="https://example.com/daotao_chung2.pdf" target="_blank">Quy trình an toàn</a></li>
+          <li><a href="https://www.youtube.com/playlist?list=PL0qPw6nTZWc-FDs9ZjkEvuYmjOdL9djGo" target="_blank">Hướng dẫn làm giấy phép, LoTo..</a></li>
+          <li><a href="https://www.youtube.com/watch?v=YDMen23YDbI" target="_blank">Using LOTO with Work Permit</a></li>
         </ul>
       </li>
+      <li class="has-submenu">
+        <a href="#" onclick="toggleMenu(event)">Đào tạo cấp liệu than ▸</a>
+        <ul class="submenu">
+          <li><a href="https://example.com/caplieu1.pdf" target="_blank">Cấu trúc hệ thống</a></li>
+          <li><a href="https://example.com/caplieu2.pdf" target="_blank">Video mô phỏng</a></li>
+        </ul>
+      </li>
+      <li class="has-submenu">
+        <a href="#" onclick="toggleMenu(event)">Đào tạo vận hành BOP ▸</a>
+        <ul class="submenu">
+          <li><a href="https://example.com/bop1.pdf" target="_blank">LT & LOTO</a></li>
+          <li><a href="https://example.com/bop2.pdf" target="_blank">Giấy phép công việc</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
 
-       
+
+       ---------------------------------------------
       <li><a href="#">An toàn</a>
         <ul>
           <li><a href="https://www.youtube.com/watch?v=WJbYwTkIT4k" target="_blank">An Toàn Lò Hồi 1</a></li>
           <li><a href="https://www.youtube.com/watch?v=0jMLiYLikn0" target="_blank">An Toàn Lò Hồi 2</a></li>
         </ul>
       </li>
+      ---------------------------------------------
       <li><a href="#">Bảo trì</a>
         <ul>
           <li><a href="https://www.youtube.com/watch?v=3ueMKRUgqXQ" target="_blank">Nguyên Lý BT</a></li>
           <li><a href="https://www.youtube.com/watch?v=7u8zMyntCWQ" target="_blank">Bảo Dưỡng</a></li>
         </ul>
       </li>
+      --------------------------------------------
       <li><a href="#">Hệ thống điện</a>
         <ul>
           <li><a href="https://www.youtube.com/watch?v=UgZBYO-0FZE" target="_blank">Máy phát 1000kVA</a></li>
@@ -161,5 +166,12 @@
       </li>
     </ul>
   </nav>
+  <script>
+  function toggleMenu(event) {
+    event.preventDefault();
+    const parent = event.target.closest('li');
+    parent.classList.toggle('open');
+  }
+</script>
 </body>
 </html>
