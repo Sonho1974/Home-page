@@ -140,8 +140,9 @@
       <li class="dropdown">
         <a href="#">Lưu Niệm ▼</a>
         <ul class="dropdown-content">
-          <li><a href="ky-uc-tuoi-tho.html">Ký Ức Tuổi Thơ</a></li>
-          <li><a href="#" onclick="checkPassword()" style="color: #d4af37; font-weight: bold;">Lưu niệm gia đình, cá nhân</a></li>
+         <li><a href="#" onclick="checkPassword('childhood')" style="color: #ffd700; font-weight: bold;">Ký Ức Tuổi Thơ</a></li>
+         <li><a href="#" onclick="checkPassword('family')" style="color: #daa520; font-weight: bold;">Lưu niệm gia đình, cá nhân</a></li>
+
         </ul>
       </li>
       <li class="dropdown">
@@ -220,17 +221,28 @@
     updateDateTime();
     setInterval(updateDateTime, 1000);
 
-    function checkPassword() {
-      const password = prompt("Vui lòng nhập mật khẩu để truy cập mục 'Cá nhân của tôi':");
-      const correctPassword = "123654";
-      if (password === correctPassword) {
-        window.location.href = "gia-dinh.html";
-      } else if (password === null || password === "") {
-        alert("Bạn chưa nhập mật khẩu.");
-      } else {
-        alert("Mật khẩu không đúng!");
-      }
-    }
+    function checkPassword(section) {
+  let password = prompt("Vui lòng nhập mật khẩu để truy cập:");
+
+  const passwords = {
+    "childhood": { pass: "0988487487", url: "ky-uc-tuoi-tho.html" },
+    "family": { pass: "123654", url: "gia-dinh-ca-nhan.html" }
+  };
+
+  if (!passwords[section]) {
+    alert("Lỗi xác định quyền truy cập!");
+    return;
+  }
+
+  if (password === passwords[section].pass) {
+    window.location.href = passwords[section].url;
+  } else if (password === null || password === "") {
+    alert("Bạn chưa nhập mật khẩu.");
+  } else {
+    alert("Mật khẩu không đúng!");
+  }
+}
+
   </script>
 </body>
 </html>
