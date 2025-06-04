@@ -137,43 +137,16 @@
     <ul>
       <li><a href="index.html">Trang Chủ🏠</a></li>
       <li><a href="trang-tho.html">Trang Thơ</a></li>
-      
-     <li class="dropdown">
-  <a href="#">Lưu Niệm ▼</a>
-  <ul class="dropdown-content">
-    <li><a href="luu-niem-1.html">Ký Ức Tuổi Thơ</a></li>
-    <li><a href="luu-niem-2.html">Thời Trung Học</a></li>
-    <li><a href="luu-niem-3.html">Thời Đại Học</a></li>
-    <li><a href="luu-niem-4.html">Đường Đời</a></li>
-    <li>
-      <a href="#" onclick="checkPassword()" style="color: #d4af37; font-weight: bold;">
-        Lưu niệm gia đình, cá nhân
-      </a>
-    </li>
-  </ul>
-
-
-  <script>
-    function checkPassword() {
-      const password = prompt("Vui lòng nhập mật khẩu để truy cập mục 'Cá nhân của tôi':");
-      const correctPassword = "123654"; // 👉 Bạn thay bằng mật khẩu mong muốn
-
-      if (password === correctPassword) {
-        window.location.href = "gia-dinh.html"; // 👉 Đường dẫn đến mục cá nhân thực sự
-      } else if (password === null || password === "") {
-        alert("Bạn chưa nhập mật khẩu.");
-      } else {
-        alert("Mật khẩu không đúng!");
-      }
-    }
-  </script>
-
-
-         
+      <li class="dropdown">
+        <a href="#">Lưu Niệm ▼</a>
+        <ul class="dropdown-content">
+          <li><a href="luu-niem-1.html">Ký Ức Tuổi Thơ</a></li>
+          <li><a href="luu-niem-2.html">Thời Trung Học</a></li>
+          <li><a href="luu-niem-3.html">Thời Đại Học</a></li>
+          <li><a href="luu-niem-4.html">Đường Đời</a></li>
+          <li><a href="#" onclick="checkPassword()" style="color: #d4af37; font-weight: bold;">Lưu niệm gia đình, cá nhân</a></li>
         </ul>
       </li>
-      
-
       <li class="dropdown">
         <a href="#">Khoa học ▼</a>
         <ul class="dropdown-content">
@@ -184,7 +157,7 @@
           <li><a href="dao-tao-viet-code-web.html">5. Đào tạo Viết code website</a></li>
         </ul>
       </li>
- <li class="dropdown">
+      <li class="dropdown">
         <a href="#">Góc Nhìn ▼</a>
         <ul class="dropdown-content">
           <li><a href="kien-thuc-song.html">Kiến Thức Sống</a></li>
@@ -193,8 +166,7 @@
           <li><a href="doi-nhan-xu-the.html">Đối Nhân Xử Thế</a></li>
         </ul>
       </li>
-
-       <li class="dropdown">
+      <li class="dropdown">
         <a href="#">Video ▼</a>
         <ul class="dropdown-content">
           <li><a href="chien-than.html">Chiến Thần - Tổng Tài</a></li>
@@ -204,9 +176,7 @@
           <li><a href="chien-than.html">Khám phá thế giới</a></li>
         </ul>
       </li>
-     
       <li><a href="#">Giải trí</a></li>
-
       <li class="dropdown">
         <a href="#">Thư giãn ▼</a>
         <ul class="dropdown-content">
@@ -252,6 +222,18 @@
     }
     updateDateTime();
     setInterval(updateDateTime, 1000);
+
+    function checkPassword() {
+      const password = prompt("Vui lòng nhập mật khẩu để truy cập mục 'Cá nhân của tôi':");
+      const correctPassword = "123654";
+      if (password === correctPassword) {
+        window.location.href = "gia-dinh.html";
+      } else if (password === null || password === "") {
+        alert("Bạn chưa nhập mật khẩu.");
+      } else {
+        alert("Mật khẩu không đúng!");
+      }
+    }
   </script>
 </body>
 </html>
