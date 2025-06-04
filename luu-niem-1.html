@@ -105,5 +105,25 @@
 
   </div>
   <div class="back-home"><a href="index.html">← Quay về Trang Chủ</a></div>
+
+  <script>
+    function updateDateTime() {
+      const now = new Date();
+      const weekdays = ['Chủ nhật', 'Thứ hai', 'Thứ ba', 'Thứ tư', 'Thứ năm', 'Thứ sáu', 'Thứ bảy'];
+      const weekday = weekdays[now.getDay()];
+      const day = now.getDate().toString().padStart(2, '0');
+      const month = (now.getMonth() + 1).toString().padStart(2, '0');
+      const year = now.getFullYear();
+      const hours = now.getHours().toString().padStart(2, '0');
+      const minutes = now.getMinutes().toString().padStart(2, '0');
+      const seconds = now.getSeconds().toString().padStart(2, '0');
+      document.getElementById('datetime').textContent = `${weekday}, ${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
+    }
+    updateDateTime();
+    setInterval(updateDateTime, 1000);
+
+    
+    }
+  </script>
 </body>
 </html>
