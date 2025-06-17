@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- 
+      This is an HTML comment
+      You can write text in a comment and the content won't be visible in the page
+    -->
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+
+    <!--
+      This is the page head - it contains info the browser uses
+      Like the title, which appears on the browser tab but not inside the page
+      Further down you'll see the content that displays in the page
+    -->
+    <title>Hello World!</title>
+
+    <!-- The website stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- The website JavaScript file -->
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <fieldset>
+  <legend>Thông tin cá nhân</legend>
+  <label>Họ tên: <input type="text" name="name"></label><br>
+  <label>Email: <input type="email" name="email"></label>
+      
+      </fieldset>
+
+    <label>Chọn trình duyệt:
+  <input list="browsers" name="browser">
+  <datalist id="browsers">
+    <option value="Chrome">
+    <option value="Firefox">
+    <option value="Safari">
+    <option value="Edge">
+  </datalist>
+</label>
+    
+    <p>Chúng tôi hợp tác với <abbr title="Tổ chức Y tế Thế giới">WHO</abbr> để phòng chống dịch bệnh.</p>
+
+    <p>Để in ra dòng chữ, hãy dùng: <code>console.log("Hello world")</code>.</p>
+
+    <pre>
+Dòng 1
+            Dòng 2 thụt vào
+Dòng 3
+</pre>
+
+    <p>Hãy <mark>chú ý</mark> đến thông báo dưới đây.</p>
+
+    <p>Bản quyền &copy; 2025. <small>Mọi chi tiết vui lòng liên hệ bộ phận CSKH.</small></p>
+
+    <label>Tiến độ tải:
+  <progress value="70" max="100">70%</progress>
+</label>
+
+    <label>Pin còn lại:
+  <meter value="0.3">30%</meter>
+</label>
+
+    <form>
+  <label>Họ tên:
+    <input type="text" name="fullname" required>
+  </label>
+  <button type="submit">Gửi</button>
+</form>
+
+    <iframe src="https://cic.gov.vn/#/" width="600" height="400" title="Tin tức"></iframe>
+
+    <noscript>Trình duyệt của bạn không hỗ trợ JavaScript hoặc đã tắt nó.</noscript>
+
+    <label for="email">Email:</label>
+<input type="email" id="email" name="email">
+
+    <button type="button" onclick="alert('Xin chào!')">Bấm vào đây</button>
+
+    <form autocomplete="off">
+  <label>Tài khoản: <input type="text" name="username"></label>
+</form>
+
+    <p>Hội thảo bắt đầu lúc <time datetime="2025-06-20T14:00">2 giờ chiều, 20/6/2025</time></p>
+
+    <details>
+  <summary>Thông tin thêm</summary>
+  <p>Đây là nội dung chi tiết sẽ hiển thị khi mở rộng.</p>
+</details>
+
+    <label>Chọn tệp:
+  <input type="file" name="myfiles" multiple>
+</label>
+
+    
+    <select name="city">
+  <optgroup label="Việt Nam">
+    <option>Hà Nội</option>
+    <option>TP.HCM</option>
+  </optgroup>
+  <optgroup label="Quốc tế">
+    <option>Tokyo</option>
+    <option>New York</option>
+  </optgroup>
+</select>
+
+    <input type="text" placeholder="Nhập tên của bạn tại đây">
+<form>
+  <input type="hidden" name="userid" value="123456">
+</form>
+
+    <label>Số điện thoại:
+  <input type="tel" name="phone" placeholder="0123-456-789">
+</label>
+
+    <form>
+  <label>Mã ZIP:
+    <input type="text" pattern="[0-9]{5}" required>
+  </label>
+  <button type="submit">Gửi</button>
+</form>
+
+    <blockquote cite="https://scm.aesmongduong.com/">
+  "Học, học nữa, học mãi."
+</blockquote>
+
+    <p>Phần trên: Mai Hạnh là một cố gái rất là xinh đẹp</p>
+<hr>
+<p>Phần dưới: Tôi rất yêu và nhớ Mai Hạnh nhiều!</p>
+    
+    <address>
+  Viết bởi <a href="son.duong@aes.com">son.duong@aes.com</a><br>
+  Tại Mông Dương, Quảng Ninh, Việt Nam
+</address>
+
+    <p><strong>Lưu ý:</strong> Bạn cần đăng nhập trước khi tiếp tục.</p>
+<p>Đây là một <em>gợi ý</em> nhẹ nhàng.</p>
+
+
+    
+  </body>
+</html>
