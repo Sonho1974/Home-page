@@ -138,10 +138,12 @@
       <li><a href="index.html">Trang Chủ🏠</a></li>
       <li><a href="trang-tho.html">Trang Thơ</a></li>
       <li class="dropdown">
-        <a href="#">Lưu Niệm ▼</a>
+        <a href="#">Ảnh Lưu Niệm ▼</a>
         <ul class="dropdown-content">
          <li><a href="#" onclick="checkPassword('childhood')" style="color: #ffd700; font-weight: bold;">Ký Ức Tuổi Thơ</a></li>
          <li><a href="#" onclick="checkPassword('family')" style="color: #daa520; font-weight: bold;">Lưu niệm gia đình, cá nhân</a></li>
+           <li><a href="#" onclick="checkPassword('lopq')" style="color: #daa520; font-weight: bold;">Ảnh các bạn Lớp Q - HTK </a></li>
+           <li><a href="#" onclick="checkPassword('duong-doi')" style="color: #daa520; font-weight: bold;">Ảnh đường đời, cuộc sống </a></li>
 
         </ul>
       </li>
@@ -228,7 +230,9 @@
   const passwords = {
     "childhood": { pass: "0988487487", url: "ky-uc-tuoi-tho.html" },
     "family": { pass: "123654", url: "gia-dinh.html" }
+     "lopq": { pass: "8891", url: "lopq.html" }
   };
+       "duong-doi": { pass: "123654", url: "duong-doi.html" }
 
   if (!passwords[section]) {
     alert("Lỗi xác định quyền truy cập!");
