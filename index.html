@@ -225,14 +225,14 @@
     setInterval(updateDateTime, 1000);
 
     function checkPassword(section) {
-  let password = prompt("Vui lòng nhập mật khẩu để truy cập:");
+    let password = prompt("Vui lòng nhập mật khẩu để truy cập:");
 
-  const passwords = {
-    "childhood": { pass: "0988487487", url: "ky-uc-tuoi-tho.html" },
-    "family": { pass: "123654", url: "gia-dinh.html" }
-     "lopq": { pass: "8891", url: "lopq.html" }
-       "duong-doi": { pass: "123456", url: "duong-doi.html" }
-  };
+    const passwords = {
+      "childhood": { pass: "0988487487", url: "ky-uc-tuoi-tho.html" },
+      "family": { pass: "123654", url: "gia-dinh.html" },
+      "lopq": { pass: "8891", url: "lopq.html" },
+      "duong-doi": { pass: "123456", url: "duong-doi.html" }
+    };
   if (!passwords[section]) {
     alert("Lỗi xác định quyền truy cập!");
     return;
